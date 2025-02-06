@@ -5,25 +5,6 @@ from phi.tools.yfinance import YFinanceTools
 
 load_dotenv()
 
-def get_company_symbol(company: str) -> str:
-    """Use this function to get the symbol for a company.
-
-    Args:
-        company (str): The name of the company.
-    
-    Returns:
-        str: The symbol for the company.
-    """
-
-    symbols = {
-        "Phidata": "PDTA",
-        "Apple": "AAPL",
-        "Amazon": "AMZN",
-        "Google": "GOOGL",
-    }
-
-    return symbols.get(company, "Unknown")
-
 # Create an instance of the Agent
 agent_instance = Agent(
     model=Groq(id="llama-3.3-70b-versatile"),
