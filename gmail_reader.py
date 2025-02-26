@@ -214,10 +214,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-"""
-Example .env file:
-
-GMAIL_EMAIL=youremail@gmail.com
-GMAIL_PASSWORD=your_password_or_app_password
-"""
