@@ -1,7 +1,6 @@
 import imaplib
 import email
 import json
-import base64
 import os
 from dotenv import load_dotenv
 from email.header import decode_header
