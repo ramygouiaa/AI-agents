@@ -4,7 +4,6 @@ import json
 import os
 from dotenv import load_dotenv
 from email.header import decode_header
-from datetime import datetime
 
 
 def decode_str(encoded_string):
