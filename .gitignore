@@ -1,3 +1,4 @@
 .env
 agents.db
 __pycache__/playground.cpython-311.pyc
+weather_summary.txt
