@@ -8,12 +8,6 @@ from email.header import decode_header
 from datetime import datetime
 
 
-# At the top of your script
-os.environ["GMAIL_EMAIL"] = "ramigouia1990@gmail.com"
-os.environ["GMAIL_PASSWORD"] = "vxyahpqrprojpnmq"
-os.environ["SEARCH_ADDRESS"] = "rabai.elyes@gmail.com"
-
-
 def decode_str(encoded_string):
     """Decode encoded email header strings"""
     if encoded_string:
@@ -191,12 +185,11 @@ def main():
     load_dotenv()
     
     # Get credentials from environment variables
-    your_email = os.environ.get("GMAIL_EMAIL", "").strip()
-    password = os.environ.get("GMAIL_PASSWORD", "").strip()
+    your_email = os.environ.get("GMAIL_EMAIL")
+    password = os.environ.get("GMAIL_PASSWORD")
     
     # Verify that required environment variables are set
     if not your_email:
-        print("Error: GMAIL_EMAIL environment variable not set in .env file")
         return
     
     if not password:
@@ -205,6 +198,7 @@ def main():
     
     print(f"Email address loaded: {your_email}")
     print(f"Password loaded: {'*' * len(password)}")
+    print(f"Password length: {len(password)}")
     
     # Get the sender address to search for
     search_address = os.environ.get("SEARCH_ADDRESS", "").strip()
